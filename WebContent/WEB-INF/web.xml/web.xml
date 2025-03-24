@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                             http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- PatientServlet Configuration -->
+    <servlet>
+        <servlet-name>PatientServlet</servlet-name>
+        <servlet-class>HMS.PatientServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Servlet Mapping for PatientServlet -->
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/patient</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome File Configuration -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Error Page Configuration -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location> <!-- Ensure error.jsp exists in WebContent/ -->
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location> <!-- Handles server errors -->
+    </error-page>
+
+</web-app>

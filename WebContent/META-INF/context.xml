@@ -1,0 +1,12 @@
+<Context>
+    <Resource name="jdbc/mediCoreDB" 
+              auth="Container" 
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/medicore"
+              username="root"
+              password="123456"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"/>
+</Context>
